@@ -1,5 +1,5 @@
 <template>
-  <div class="about">
+  <div class="login">
     <h1>This is an about page</h1>
 
     <h2>ログイン</h2>
@@ -46,12 +46,11 @@ export default {
         )
         .then((response) => {
           console.log(response); //返ってきたレスポンスをログに表示
-          console.log("hello firebase!!");
-          location.href = "./detail";
+          this.$store.commit("updateIdToken", response.data.idToken); //追記
+          this.$router.push("/detail"); //追記
         })
         .catch((err) => {
           console.log("err:", err);
-          console.log("errですよ！！！！！");
         });
       this.email = "";
       this.password = "";

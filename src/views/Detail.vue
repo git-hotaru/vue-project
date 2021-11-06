@@ -7,27 +7,9 @@
 <script>
 export default {
   data() {
-    return {
-      count: 0,
-      count_up: 15,
-    };
+    return {};
   },
-  computed: {
-    plusOne() {
-      if (this.count_up > this.count) {
-        return this.count + 1;
-      } else {
-        return "sorry, i can't countup!!";
-      }
-    },
-  },
-  methods: {
-    increment() {
-      return this.count++;
-    },
-    decrement() {
-      return this.count--;
-    },
-  },
+  computed: {},
+  methods: {},
 };
 </script>
